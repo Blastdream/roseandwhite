@@ -31,7 +31,7 @@
 
 		<hr>
 
-		<div class="exp-collective">
+		<div class="expo-collectives">
 			<h2>expositions collectives</h2>
 			<div class="zone-col">
 				<div class="groupe-col">
@@ -49,7 +49,6 @@
 						        the_sub_field('contenu_exposition_collective_annee');
 						        echo '</p>';
 					         	if( have_rows('occurrence_exposition_collective') ):
-					         		echo 'patate';
 
 							 		// loop through the rows of data
 							   		while ( have_rows('occurrence_exposition_collective') ) : the_row();
@@ -74,7 +73,7 @@
 
 			<hr>
 
-			<div class="exp-personnel">
+			<div class="expo-personnelles">
 				<h2>Expositions personnelles</h2>
 				<div class="zone-col">
 					<div class="groupe-col">
@@ -82,7 +81,7 @@
 					if ( have_posts() ) {
 						while ( have_posts() ) {
 							the_post();         
-				        	if( have_rows('expositions_personnelles_a_propos') ):
+				        	if( have_rows('expositions_personelles_a_propos') ):
 
 						 		// loop through the rows of data
 						    	while ( have_rows('expositions_personnelles_a_propos') ) : the_row();
@@ -115,15 +114,13 @@
 			</div>
 
 		<hr>
-			<div class="press">
-				<h2>Press</h2>
-				<div class="press-text">
-					<p>Art actuel</p>
-					<p>La montagne</p>
-					<p>La dépêche du midi</p>
-					<p>Wegotalent.com</p>
-					<p>Brive.mag</p>
-					<p>Le populaire du centr</p>
+			<div class="presse">
+				<h2>Presse</h2>
+				<div class="presse-text">
+					<p><?php 
+							echo get_field('presse_a_propos');
+						?>
+					</p>
 				</div>
 			</div>
 
@@ -132,8 +129,9 @@
 			<div class="prix">
 				<h2>Prix</h2>
 				<div class="prix-text">
-					<p>
-					Prix du public - Biennale art actuel, Brive. 2013
+					<p><?php 
+							echo get_field('prix_a_propos');
+						?>
 					</p>
 				</div>
 			</div>
@@ -145,53 +143,3 @@
 	</div>
 </body>
 </html>
-
-
-<?php 
-if ( have_posts() ) {
-	while ( have_posts() ) {
-		the_post();         
-        echo "<h1>".get_the_title()."</h1>";
-        echo get_field('description_artiste_a_propos');
-   
-        if( have_rows('expositions_collectives_a_propos') ):
-
-		 	// loop through the rows of data
-		    while ( have_rows('expositions_collectives_a_propos') ) : the_row();
-
-		        // display a sub field value
-		        the_sub_field('contenu_exposition_collective_annee');
-	        	if( have_rows('occurence_exposition') ):
-
-				 	// loop through the rows of data
-				    while ( have_rows('occurence_exposition') ) : the_row();
-
-				        // display a sub field value
-				        the_sub_field('text_ligne_occurence');
-
-				    endwhile;
-				    else :
-
-				    // no rows found
-
-				endif;
-		    endwhile;
-		    else :
-
-		    // no rows found
-
-		endif;
-
-
-
-        echo "<br/>";
-        echo get_field('presse_a_propos');
-        echo "<br/>"; 
-        echo get_field('prix_a_propos');
-
-       
-        
-        $image = get_field('image-oeuvre'); 
-        echo "<img src='".$image['url']."' alt='".$image['alt']."'>";
-	} 
-} ?>

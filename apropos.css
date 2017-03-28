@@ -147,11 +147,11 @@ table {
 	border: 2px solid blue;
 }
 
-.exp-collective{
+.expo-collectives{
 	padding: 40px 0px 40px 0px;
 }
 
-.exp-personnel{
+.expo-personnelles{
 	padding: 40px 0px 40px 0px;
 }
 
@@ -159,10 +159,10 @@ hr{
 	width: 10%
 }
 
-.press{
+.presse{
 	padding: 40px 0px;
 }
-.press-text{
+.presse-text{
 	padding: 20px 0px 0px 0px;
 	font-family: 'Lato', sans-serif;
 	text-align: center;
