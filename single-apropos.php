@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/apropos.css">
 	<title>Page à propos</title>
 </head>
+
 <body>
 	<img class="logo" src="image/logo2.png" alt="Signature de l'artiste comme logo">
 	<div class="header">
@@ -17,12 +18,14 @@
 	</div>
 	<div class="groupe-site">
 		<div class="description">
-			<p><?php 
-				if ( have_posts() ) {
-					while ( have_posts() ) {
+			<p>
+			<?php 
+			if ( have_posts() ) {
+				while ( have_posts() ) {
 					the_post();         
-	        		echo get_field('description_artiste_a_propos');}
-	        	}?>
+					echo get_field('description_artiste_a_propos');
+				}
+			}?>
 			</p>
 		</div>
 
@@ -32,62 +35,84 @@
 			<h2>expositions collectives</h2>
 			<div class="zone-col">
 				<div class="groupe-col">
-					<?php 
-						if ( have_posts() ) {
-						while ( have_posts() ) {
-							the_post();         
-					        if( have_rows('expositions_collectives_a_propos') ):
+				<?php 
+				if ( have_posts() ) {
+					while ( have_posts() ) {
+						the_post();         
+			        	if( have_rows('expositions_collectives_a_propos') ):
 
-							 	// loop through the rows of data
-							    while ( have_rows('expositions_collectives_a_propos') ) : the_row();
+					 		// loop through the rows of data
+					    	while ( have_rows('expositions_collectives_a_propos') ) : the_row();
 
-							        // display a sub field value
-							        echo "<p class='annee'>";
-							        the_sub_field('contenu_exposition_collective_annee');
-							        echo '</p>';
-							         if( have_rows('occurence_exposition') ):
+					        	// display a sub field value
+						        echo "<p class='annee'>";
+						        the_sub_field('contenu_exposition_collective_annee');
+						        echo '</p>';
+					         	if( have_rows('occurrence_exposition_collective') ):
+					         		echo 'patate';
 
-									 	// loop through the rows of data
-									    while ( have_rows('occurence_exposition') ) : the_row();
-echo '<div class="text-col">';
-									        // display a sub field value
-									        the_sub_field('text_ligne_occurence');
-echo '</div>';
-									    endwhile; 
-									    else :
-
-									    // no rows found
-
-									endif; 
-							 endwhile;
-						    else :
-
-						    // no rows found
-
-						endif; }}?>
-							       
+							 		// loop through the rows of data
+							   		while ( have_rows('occurrence_exposition_collective') ) : the_row();
+										echo '<div class="text-col">';
+								        // display a sub field value
+								        the_sub_field('text_ligne_occurrence_collective');
+										echo '</div>';
+							    	endwhile; 
+							    else :
+									// no rows found
+								endif; 
+							endwhile;
+				    	else :
+				    		// no rows found
+						endif; 
+					}
+				}
+				?>
+						       
 		   		</div>
 			</div>
 
-		<hr>
+			<hr>
 
-		<div class="exp-personnel">
-			<h2>Expositions personnelles</h2>
-			<div class="zone-col">
-				<div class="groupe-col">
-					<p class="annee">2016</p>
-					<p class="text-col">Lorem ipsum dolor sit amet, 	consectetur		adipisicing elit, sed do eiusmod</p>
-				</div>
-				<div class="groupe-col">
-					<p class="annee">2015</p>
-					<p class="text-col">Lorem ipsum dolor sit amet, 	consectetur		adipisicing elit, sed do eiusmod</p>
-				</div>
-				<div class="groupe-col">
-					<p class="annee">2014</p>
-					<p class="text-col">Lorem ipsum dolor sit amet, 	consectetur		adipisicing elit, sed do eiusmod</p>
+			<div class="exp-personnel">
+				<h2>Expositions personnelles</h2>
+				<div class="zone-col">
+					<div class="groupe-col">
+					<?php 
+					if ( have_posts() ) {
+						while ( have_posts() ) {
+							the_post();         
+				        	if( have_rows('expositions_personnelles_a_propos') ):
+
+						 		// loop through the rows of data
+						    	while ( have_rows('expositions_personnelles_a_propos') ) : the_row();
+
+						        	// display a sub field value
+							        echo "<p class='annee'>";
+							        the_sub_field('contenu_exposition_personnelle_annee');
+							        echo '</p>';
+						         	if( have_rows('occurrence_exposition_personnelle') ):
+
+								 		// loop through the rows of data
+								   		while ( have_rows('occurrence_exposition_personnelle') ) : the_row();
+											echo '<div class="text-col">';
+									        // display a sub field value
+									        the_sub_field('text_ligne_occurrence_personnelle');
+											echo '</div>';
+								    	endwhile; 
+								    else :
+										// no rows found
+									endif; 
+								endwhile;
+					    	else :
+					    		// no rows found
+							endif; 
+						}
+					}
+					?>
+					</div>
 				</div>
 			</div>
-		</div>
 
 		<hr>
 			<div class="press">
