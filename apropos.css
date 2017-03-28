@@ -1,0 +1,179 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+/* CODE */ 
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans+Condensed:300');
+
+.site{
+	/*
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Oranienbaum', serif;
+    */
+}
+
+.logo{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 20%;
+	height: auto;
+}
+
+.header{
+	display: flex;
+	width: 100%
+
+}
+
+.menu{
+	border: 2px solid blue;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.menu ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: 6%;
+}
+
+.menu li{
+}
+
+.menu a{
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	font-size: 25px;
+	color: black;
+}
+.groupe-site{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+    width: 70%;
+    border: 2px solid red;
+}
+
+.groupe-site h2{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	text-align: center;
+}
+.description{
+	padding: 50px 0px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-weight: 300;
+}
+
+.annee{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.zone-col{
+	padding: 20px 0px 0px 0px;
+}
+
+.groupe-col{
+	padding-top: 5px;
+	margin: auto;
+	width: 70%;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+.text-col{
+	text-align: center;
+	border: 2px solid blue;
+}
+
+.exp-collective{
+	padding: 40px 0px 40px 0px;
+}
+
+.exp-personnel{
+	padding: 40px 0px 40px 0px;
+}
+
+hr{
+	width: 10%
+}
+
+.press{
+	padding: 40px 0px;
+}
+.press-text{
+	padding: 20px 0px 0px 0px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-weight: 300;
+}
+.prix{
+	padding: 40px 0px 0px 0px;
+}
+.prix-text{
+	padding: 20px 0px 0px 0px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-weight: 300;
+}
