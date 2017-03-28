@@ -32,7 +32,7 @@
 		<hr>
 
 		<div class="expo-collectives">
-			<h2>expositions collectives</h2>
+			<h2>Expositions collectives</h2>
 			<div class="zone-col">
 				<div class="groupe-col">
 				<?php 

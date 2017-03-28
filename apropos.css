@@ -83,7 +83,7 @@ table {
 }
 
 .menu{
-	border: 2px solid blue;
+	/*border: 2px solid blue;*/
 	width: 60%;
 	margin: 0 auto;
 }
@@ -95,7 +95,13 @@ table {
 	padding-top: 6%;
 }
 
-.menu li{
+.menu a:hover:before{
+	-webkit-transition: -webkit-transform cubic-bezier(0.785, .135, .15, .86) .6s;
+    transition: -webkit-transform cubic-bezier(0.785, .135, .15, .86) .6s;
+    transition: transform cubic-bezier(0.785, .135, .15, .86) .6s;
+    transition: transform cubic-bezier(0.785, .135, .15, .86) .6s, -webkit-transform cubic-bezier(0.785, .135, .15, .86) .6s;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
 }
 
 .menu a{
@@ -103,14 +109,34 @@ table {
 	text-decoration: none;
 	font-size: 25px;
 	color: black;
+	position: relative;
 }
+
+.menu a:before{
+    content: '';
+    position: absolute;
+    background: #ee5949;
+    bottom: 2px;
+    height: 10px;
+    width: 100%;
+    z-index: -1;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform cubic-bezier(0.785,.135,.15,.86) .4s;
+    transition: -webkit-transform cubic-bezier(0.785,.135,.15,.86) .4s;
+    transition: transform cubic-bezier(0.785,.135,.15,.86) .4s;
+    transition: transform cubic-bezier(0.785,.135,.15,.86) .4s,-webkit-transform cubic-bezier(0.785,.135,.15,.86) .4s;
+}
+
 .groupe-site{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin: auto;
     width: 70%;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 .groupe-site h2{
@@ -118,6 +144,7 @@ table {
 	font-size: 25px;
 	text-align: center;
 }
+
 .description{
 	padding: 50px 0px;
 	font-family: 'Lato', sans-serif;
@@ -144,7 +171,7 @@ table {
 
 .text-col{
 	text-align: center;
-	border: 2px solid blue;
+	/*border: 2px solid blue;*/
 }
 
 .expo-collectives{
