@@ -1,3 +1,8 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,67 +23,37 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
 body {
-	line-height: 1;	
+	line-height: 1;
+	
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	
 }
-
 ol, ul {
 	list-style: none;
 }
-
 blockquote, q {
 	quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-*{
-	box-sizing: border-box;
-}
-
 /* CODE */ 
 
-
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans+Condensed:300');
-
-.site{
-	/*
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Oranienbaum', serif;
-    */
-}
-
-.logo{
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	width: 20%;
-	height: auto;
-}
-
-.header{
-	display: flex;
-	width: 100%;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans+Condensed:300,300i,700|Oranienbaum');
 
 .menu{
 	/*border: 2px solid blue;*/
@@ -128,84 +103,68 @@ table {
 	position: relative;
 }
 
+textarea {
+	resize: none;
+}
 
-
-.groupe-site{
+/* FORMULAIRE */
+.formulaire{
+	height: 600px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300i;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	margin: auto;
-    width: 70%;
-    /*border: 2px solid red;*/
+	justify-content: space-around;	
+	align-items: center;
 }
 
-.groupe-site h2{
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 25px;
-	text-align: center;
+.form-label {
+	font-size: 12px;
+	color: #5e9bfc;
+	margin: 0;
+	display: block;
+	opacity: 1;
+	-webkit-transition: .333s ease top, .333s ease opacity;
+	transition: .333s ease top, .333s ease opacity;
 }
 
-.description{
-	padding: 50px 0px;
-	font-family: 'Lato', sans-serif;
-	text-align: center;
-	font-weight: 300;
+.form-control {
+	border-radius: 0;
+	border-color: #ccc;
+   	border-width: 0 0 2px 0;
+   	border-style: none none solid none;
+   	box-shadow: none;
 }
 
-.annee{
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
+.form-control:focus {
+	box-shadow: none;
+	border-color: #5e9bfc;
 }
 
-.zone-col{
-	padding: 20px 0px 0px 0px;
+.js-hide-label {
+	opacity: 0; 	
 }
 
-.groupe-col{
-	padding-top: 5px;
-	margin: auto;
-	width: 70%;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
+.js-unhighlight-label {
+	color: #999 
 }
 
-.text-col{
-	text-align: center;
-	/*border: 2px solid blue;*/
+.envoyer {
+	background-color: black;
+	border: none;
+    color: white;
+    font-size: 16px;
+    line-height: inherit;
+    margin: 30px 0;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    transition: all 0.25s ease 0s;
 }
 
-.expo-collectives{
-	padding: 40px 0px 40px 0px;
-}
-
-.expo-personnelles{
-	padding: 40px 0px 40px 0px;
-}
-
-hr{
-	width: 10%
-}
-
-.presse{
-	padding: 40px 0px;
-}
-
-.presse-text{
-	padding: 20px 0px 0px 0px;
-	font-family: 'Lato', sans-serif;
-	text-align: center;
-	font-weight: 300;
-}
-
-.prix{
-	padding: 40px 0px 0px 0px;
-}
-
-.prix-text{
-	padding: 20px 0px 0px 0px;
-	font-family: 'Lato', sans-serif;
-	text-align: center;
-	font-weight: 300;
+.envoyer:hover,.envoyer:active, .envoyer:focus {
+	background: #f2aacb;
+	color: white;
+	border: none;
 }
 
 .reseaux{

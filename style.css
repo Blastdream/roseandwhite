@@ -92,6 +92,7 @@ video {
     width: 30%;
     justify-content: center;
     align-content: center;
+
 }
 
 ul {
@@ -116,7 +117,7 @@ a {
 .header-top a:before {
     content: '';
     position: absolute;
-    background: #ee5949;
+    background: #f2aacb;
     bottom: 2px;
     height: 10px;
     width: 8%;

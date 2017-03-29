@@ -6,7 +6,6 @@
 </head>
 
 <body>
-	<img class="logo" src="image/logo2.png" alt="Signature de l'artiste comme logo">
 	
 	<div class="header">
 		<nav class="menu">
@@ -135,9 +134,11 @@
 			</div>
 
 			<br>
+			<?php 
+				get_footer('footer.php');
+            ?>
 
 			<div class="contact"></div>
-			<div class="social"></div>
 	</div>
 </body>
 </html>
