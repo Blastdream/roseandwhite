@@ -7,15 +7,13 @@
 
 <body>
 	<img class="logo" src="image/logo2.png" alt="Signature de l'artiste comme logo">
+	
 	<div class="header">
 		<nav class="menu">
-			<ul>
-				<li><a href="galerie.php">Galerie</a></li>
-				<li><a href="apropos.php">À propos</a></li>
-				<li><a href="contact.php">Contact</a></li>
-			</ul>
+			<?php get_header('header.php'); ?>
 		</nav>
 	</div>
+
 	<div class="groupe-site">
 		<div class="description">
 			<p>

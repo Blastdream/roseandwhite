@@ -1,7 +1,7 @@
 <?php get_header(); ?> 
 
 <?php echo "machin";?>
-<?php include('page-accueil.php') ?>
+<?php include('front-page.php') ?>
 
 
 	
