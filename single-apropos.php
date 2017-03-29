@@ -7,11 +7,11 @@
 
 <body>
 	
-	<div class="header">
+	<header>
 		<nav class="menu">
 			<?php get_header('header.php'); ?>
 		</nav>
-	</div>
+	</header>
 
 	<div class="groupe-site">
 		<div class="description">
